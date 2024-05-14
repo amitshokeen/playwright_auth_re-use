@@ -16,6 +16,10 @@ Playwright authentication re-use
   * Do the likewise for other browsers as needed. You can always create extra `loginAuth.json` files named appropriately.
   * Don't forget to remove the login steps from each test case as they are not needed anymore.
 
-* How to create a test that avoids a logged in context?
+* How to create a test that needs to avoid a logged in context?
   * In the test, clear the cookies like this: `await context.clearCookies()`
   * See the `test-3.spec.ts` file for clarity.
+  * An alternate way to achieve the same result would be the following steps:
+    * Create a `noAuth.json` file with just `{}`
+    * In the test file use this: `test.use({storageState: '../noAuth.json'})`
+    * For clarity, note the code in `test-4.spec.ts`
