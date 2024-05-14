@@ -9,3 +9,4 @@ test.only("Basic test", async ({ page }) => {
     await expect(page.locator('#logout2')).toBeVisible()
 
 })
+
