@@ -23,3 +23,7 @@ Playwright authentication re-use
     * Create a `noAuth.json` file with just `{}`
     * In the test file use this: `test.use({storageState: '../noAuth.json'})`
     * For clarity, note the code in `test-4.spec.ts`
+
+* How to use the codegen to get the auth re-use setup automatically?
+  * https://playwright.dev/docs/codegen#preserve-authenticated-state
+  * `npx playwright codegen github.com/microsoft/playwright --save-storage=auth.json`
