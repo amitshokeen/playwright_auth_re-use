@@ -11,5 +11,10 @@ async function globalSetup() {
     await page.locator('button[onclick="logIn()"]').click()
     await expect(page.locator('#logout2')).toBeVisible({timeout: 5000})
 
-    // save the state of the page
+    // save the state of the page -> incates we are logged in
+    await page.context().storageState({ path: "./chromeLoginAuth.json" })
+
+    await browser.close()
 }
+
+export default globalSetup
