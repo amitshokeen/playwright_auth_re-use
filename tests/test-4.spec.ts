@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test"
 
+// this test is expected to fail.
 test.use({ storageState: '../noAuth.json',
     headless: true,
     browserName: 'firefox'
